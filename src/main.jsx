@@ -1,14 +1,15 @@
-import React from "react";
 import ReactDOM from "react-dom/client";
 import App from "./App.jsx";
 import "./index.css";
 import { GoogleOAuthProvider } from "@react-oauth/google";
-
+import { NextUIProvider } from "@nextui-org/react";
 
 ReactDOM.createRoot(document.getElementById("root")).render(
-  <React.StrictMode>
+  <NextUIProvider>
     <GoogleOAuthProvider clientId="115648165612-obosrl6rgrbum7aneqauu84ik02opq19.apps.googleusercontent.com">
-      <App />
+      <main className="dark text-foreground bg-background">
+        <App />
+      </main>
     </GoogleOAuthProvider>
-  </React.StrictMode>
+  </NextUIProvider>
 );
